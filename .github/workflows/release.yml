@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version (e.g. 0.1.0)'
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            V="${{ github.event.inputs.version }}"
+            [ -z "$V" ] && V="manual"
+          else
+            V="${GITHUB_REF_NAME#v}"
+          fi
+          echo "version=$V" >> "$GITHUB_OUTPUT"
+
+      - name: Package mod
+        run: |
+          MOD_DIR="isnightmaredream_smart_line_namer"
+          mkdir -p "$MOD_DIR"
+          cp -r mod.json strings.json _metadata content "$MOD_DIR/"
+          zip -r "tf3-smart-line-namer-${{ steps.version.outputs.version }}.zip" "$MOD_DIR"
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: "tf3-smart-line-namer-*.zip"
+          generate_release_notes: true

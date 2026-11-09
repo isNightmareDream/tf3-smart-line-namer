@@ -1,0 +1,15 @@
+{
+    "authors": [
+        {
+            "name": "isNightmareDream",
+            "role": "CREATOR"
+        }
+    ],
+    "name": "Smart Line Namer",
+    "summary": "Clear, human-readable auto-generated line names",
+    "description": "Smart Line Namer adds two auto-rename schemes to the line manager, turning the game's default names like \"Line 12\" into names that actually describe each line.\n\nVehicle - Route — vehicle type + direction:\n- Train: Gukovo — Chekalin (between towns)\n- Bus Gukovo: Center — North (within a town, directions from the town center)\n- Truck: Quarry — Factory (between industries)\n\nVehicle - Stops — vehicle type + first and last station:\n- Train: Central — Riverside (between towns)\n- Tram Gukovo: Factory — Park (within a town)\n\nVehicle types are detected automatically and are passenger/cargo aware: bus, truck, tram, train, cargo train, plane, cargo plane, ship and cargo ship. A station named after its own town is shown as \"Station\" (\"Вокзал\" in Russian) to keep the name readable.\n\nHow to use: create or select a line, open the auto-rename dialog (the wand button) and choose the Vehicle - Route or Vehicle - Stops scheme. The vanilla schemes remain available.\n\nAll names are localized — the mod ships with English and Russian translations.",
+    "tags": [
+        "Script Mod"
+    ],
+    "url": "https://github.com/isNightmareDream/tf3-smart-line-namer"
+}
