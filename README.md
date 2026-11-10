@@ -12,7 +12,7 @@
 
 <p>Tired of <code>Line 14</code>, <code>Line 15</code>, <code>Line 16</code>? Smart Line Namer adds an auto-rename scheme that gives every line a name telling you what it is and where it goes, so you can find the right line in a long list without opening it.</p>
 
-<p align="center"><img src="_metadata/1.png" alt="Before and after" width="720"></p>
+<p align="center"><img src="_metadata/2.png" alt="Before and after" width="720"></p>
 
 <h2>Name format</h2>
 
@@ -35,7 +35,7 @@
   <li>all intercity lines form their own block, grouped by vehicle.</li>
 </ul>
 
-<p align="center"><img src="_metadata/2.png" alt="Local, intercity and freight lines" width="720"></p>
+<p align="center"><img src="_metadata/3.png" alt="Local, intercity and freight lines" width="720"></p>
 
 <h2>How names are built</h2>
 <ul>
@@ -93,7 +93,7 @@
   <li><code>content/gui/line_vehicle_mgmt/auto_rename/scheme_components/</code> — the scheme component that calls the core.</li>
   <li><code>content/gui/line_vehicle_mgmt/auto_rename/schemes/</code> — the scheme shown in the auto-rename menu.</li>
   <li><code>strings.json</code> — English and Russian translations, including short industry names (<code>ind_*</code> keys).</li>
-  <li><code>_metadata/</code> — mod info, cover (<code>0.png</code>) and gallery images (<code>1.png</code>, <code>2.png</code>).</li>
+  <li><code>_metadata/</code> — mod info, logo (<code>0.png</code>) and mod.io gallery (<code>1.png</code> — the cover again, <code>2.png</code>, <code>3.png</code>).</li>
   <li><code>.github/workflows/release.yml</code> — builds the release zip from a tag.</li>
 </ul>
 
